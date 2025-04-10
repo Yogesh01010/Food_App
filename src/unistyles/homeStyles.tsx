@@ -1,0 +1,173 @@
+import { RFValue } from 'react-native-responsive-fontsize';
+import { createStyleSheet } from 'react-native-unistyles';
+import { Platform } from 'react-native';
+
+export const homeStyles = createStyleSheet(() => ({
+  container: {
+    flex: 1,
+    backgroundColor: '#FFFFFF',
+  },
+  topHidingContainer: {
+    marginTop: 100, // replaced isBannerHeight
+    backgroundColor: '#FFFFFF',
+  },
+  topHeader: {
+    zIndex: 1,
+    alignSelf: 'center',
+    paddingHorizontal: 10,
+  },
+  animatedText: {
+    fontSize: RFValue(10.5),
+    fontFamily: 'Okra-Bold',
+    color: '#333333',
+  },
+  animatedSubText: {
+    fontSize: RFValue(7),
+    lineHeight: 9,
+    fontFamily: 'Okra-Bold',
+    color: '#666666',
+  },
+  exploreContainer: {
+    marginVertical: 10,
+  },
+  lottieContainer: {
+    width: 400,
+    height: Platform.OS === 'android' ? 400 : 450,
+    backgroundColor: '#FF5733',
+    justifyContent: 'flex-end',
+    position: 'absolute',
+    zIndex: -3,
+    alignSelf: 'center',
+  },
+  lottie: {
+    width: '100%',
+    height: 400,
+    bottom: -1,
+  },
+  rollingText: {
+    opacity: 0.6,
+    color: '#999999',
+  },
+  flexRowBetween: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  flexRowGap: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+  },
+  flexRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  translation: {
+    paddingVertical: 2,
+    paddingHorizontal: 5,
+    borderRadius: 8,
+    backgroundColor: '#FFFFFF',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  translationIcon: {
+    width: 32,
+    height: 32,
+    resizeMode: 'contain',
+  },
+  profileImage: {
+    width: '100%',
+    height: '100%',
+    resizeMode: 'contain',
+    borderRadius: 50,
+  },
+  goldenCircle: {
+    width: 50,
+    height: 50,
+    position: 'absolute',
+    alignSelf: 'center',
+    borderRadius: 25,
+    zIndex: 1,
+  },
+  profileAvatar: {
+    width: 40,
+    height: 40,
+    marginHorizontal: 5,
+    borderRadius: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  vegMode: {
+    width: '15%',
+    top: 3,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  switch: {
+    width: 35,
+    height: 35,
+    resizeMode: 'contain',
+    bottom: 2,
+  },
+  searchInputContainer: {
+    width: '88%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    backgroundColor: '#F3F4F7',
+    paddingHorizontal: 10,
+    borderRadius: 12,
+    borderWidth: 0.6,
+    borderColor: '#CCCCCC',
+    shadowOffset: { width: 1, height: 1 },
+    shadowOpacity: 0.7,
+    shadowRadius: 6,
+    shadowColor: '#FFFFFF',
+    elevation: 5,
+  },
+  textContainer: {
+    width: '80%',
+    paddingLeft: 10,
+    height: 48,
+  },
+  divider: {
+    width: 1,
+    height: 24,
+    backgroundColor: '#DDDDDD',
+    marginHorizontal: 10,
+  },
+  padding: {
+    padding: 10,
+  },
+  flexRowCenter: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'center',
+  },
+  leftTab: (isActive: boolean) => ({
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 5,
+    paddingHorizontal: 10,
+    backgroundColor: isActive ? '#EFEFEF' : '#FFFFFF',
+    borderColor: isActive ? '#00AA55' : '#CCCCCC',
+    borderWidth: 1,
+    borderTopLeftRadius: 8,
+    borderBottomLeftRadius: 8,
+  }),
+  rightTab: (isActive: boolean) => ({
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: 5,
+    padding: 5,
+    paddingHorizontal: 10,
+    backgroundColor: isActive ? '#EFEFEF' : '#FFFFFF',
+    borderColor: isActive ? '#00AA55' : '#CCCCCC',
+    borderWidth: 1,
+    borderTopRightRadius: 8,
+    borderBottomRightRadius: 8,
+  }),
+}));
