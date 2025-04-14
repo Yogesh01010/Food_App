@@ -42,7 +42,7 @@ const CustomTabBar: FC<BottomTabBarProps> = props => {
 
   const indicatorStyle = useAnimatedStyle(() => {
     const baseLeft = 10;
-    let slideValue = state.index == 3 ? 0.23 : 0.24;
+    let slideValue = state.index === 3 ? 0.23 : 0.24;
     return {
       left: withTiming(baseLeft + state.index * screenWidth * slideValue),
     };

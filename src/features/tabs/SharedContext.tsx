@@ -14,6 +14,7 @@ const SharedStateContext = createContext<SharedStateContextType | undefined>(
 export const SharedStateProvider: FC<{children: ReactNode}> = ({children}) => {
   const scrollY = useSharedValue(0);
   const scrollYGlobal = useSharedValue(0);
+  // if we scrolled and at the bottom by cleacking this we can go directly to the top
   const scrollToTop = () => {
     scrollY.value = withTiming(0, {duration: 300});
     scrollYGlobal.value = withTiming(0, {duration: 300});

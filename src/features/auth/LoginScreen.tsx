@@ -18,27 +18,27 @@ import SocialLogin from '@components/ui/SocialLogin';
 import useKeyboardOffsetHeight from '@utils/useKeyboardOffsetHeight';
 
 const LoginScreen: FC = () => {
-  const animatedValue = useRef(new Animated.Value(0)).current
-  const keyboardOffsetHeight = useKeyboardOffsetHeight()
+  const animatedValue = useRef(new Animated.Value(0)).current;
+  const keyboardOffsetHeight = useKeyboardOffsetHeight();
   const {styles} = useStyles(loginStyles);
   const [phone, setPhone] = useState('');
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (keyboardOffsetHeight == 0) {
-        Animated.timing(animatedValue, {
-            toValue: 0,
-            duration: 500,
-            useNativeDriver: true
-        }).start()
+      Animated.timing(animatedValue, {
+        toValue: 0,
+        duration: 500,
+        useNativeDriver: true,
+      }).start();
     } else {
-        Animated.timing(animatedValue, {
-            toValue: -keyboardOffsetHeight * 0.25,
-            duration: 500,
-            useNativeDriver: true
-        }).start()
+      Animated.timing(animatedValue, {
+        toValue: -keyboardOffsetHeight * 0.25,
+        duration: 500,
+        useNativeDriver: true,
+      }).start();
     }
-}, [keyboardOffsetHeight])
+  }, [keyboardOffsetHeight]);
 
   const handleLogin = async () => {
     setLoading(true);
@@ -61,7 +61,7 @@ const LoginScreen: FC = () => {
         bounces={false}
         keyboardShouldPersistTaps="handled"
         keyboardDismissMode="on-drag"
-        style={{ transform: [{ translateY: animatedValue }] }}
+        style={{transform: [{translateY: animatedValue}]}}
         contentContainerStyle={styles.bottomContainer}>
         <CustomText fontFamily="Okra-Bold" variant="h2" style={styles.title}>
           India's #1 Food Delivery and Dining App

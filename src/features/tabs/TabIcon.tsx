@@ -67,7 +67,6 @@ const TabIcon: FC<TabProps> = memo(({name}) => {
 });
 
 const TabIconFocused: FC<TabProps> = memo(({name}) => {
-  
   const isVegMode = useAppSelector(state => state.user.isVegMode);
 
   return (
