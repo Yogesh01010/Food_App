@@ -48,7 +48,7 @@ const RestaurantList = () => {
                 Made with ❤️
               </CustomText>
               <CustomText fontFamily="Okra-Medium" variant="h5">
-                By - Ritik Prasad
+                By - Yogesh
               </CustomText>
             </View>
           );
